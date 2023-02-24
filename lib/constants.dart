@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 // const kPrimaryColor = Color(0xFFFF7643);
 const kBgColor = Color(0xFFF6F5F4);
 const ktextColor = Color(0xFF0A2B81);
+const ktextColor2 = Color(0xFF767EC7);
 const kPrimaryColor = Color(0xFF9066D7);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
@@ -17,6 +18,8 @@ const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
+const kDefaultPadding = 20.0;
+const kErrorColor = Color(0xFFF03738);
 
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),

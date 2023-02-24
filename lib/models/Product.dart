@@ -8,6 +8,7 @@ class Product {
   final List<String> images;
   final List<Color> colors;
   // final double rating, price;
+  // final double reting;
   final String rating, price;
   final bool isFavourite, isPopular;
 
@@ -15,13 +16,14 @@ class Product {
     required this.id,
     required this.images,
     required this.colors,
-    // this.rating = 0.0,
+    // this.reting = 0.0,
     required this.rating,
     this.isFavourite = false,
     this.isPopular = false,
     required this.title,
     required this.price,
     required this.description,
+    
   });
 }
 
@@ -32,9 +34,11 @@ List<Product> demoProducts = [
     id: 1,
     images: [
       "assets/images/people-1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "assets/images/people-1.png",
+      "assets/images/people-1.png",
+      // "assets/images/ps4_console_white_2.png",
+      // "assets/images/ps4_console_white_3.png",
+      // "assets/images/ps4_console_white_4.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -104,4 +108,4 @@ List<Product> demoProducts = [
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    "Bersama kak Reza, kak Reza akan membahas tentang bagaimana cara sukses berkarir di bidang IT dan ...";

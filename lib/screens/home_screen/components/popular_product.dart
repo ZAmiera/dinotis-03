@@ -2,6 +2,7 @@
 
 import 'package:dinotis/components/product_card.dart';
 import 'package:dinotis/models/Product.dart';
+import 'package:dinotis/screens/details/details_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,25 +21,18 @@ class PopularProducts extends StatelessWidget {
           child: SectionTitle(title: "Jadwal Sedang Berlangsung", press: () {}),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
-        SingleChildScrollView(
+       SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              // bagian ini adalah bagian yang akan di looping
-              // untuk menampilkan produk yang popular
               ...List.generate(
                 demoProducts.length,
                 (index) {
                   if (demoProducts[index].isPopular)
                     return ProductCard(product: demoProducts[index]);
 
-                  // return SizedBox.shrink(); // here by default width and height is 0
-               
-                 return SizedBox(
-                  height: getProportionateScreenHeight(0),
-                  width: getProportionateScreenWidth(12)
-                  );
-
+                  return SizedBox
+                      .shrink(); // here by default width and height is 0
                 },
               ),
               SizedBox(width: getProportionateScreenWidth(20)),

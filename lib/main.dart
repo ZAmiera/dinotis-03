@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'kopi telu',
+      title: 'Dinotis',
       theme: theme(),
       // home: SplashScreen(),
       initialRoute: SplashScreen.routeName,

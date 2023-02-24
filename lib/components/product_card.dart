@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:dinotis/models/Product.dart';
+import 'package:dinotis/screens/details/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -13,11 +14,13 @@ class ProductCard extends StatelessWidget {
     Key? key,
     this.width = 140,
     this.aspectRetio = 1.02,
-    required this.product,
+    required this.product, 
+    // required this.press,
   }) : super(key: key);
 
   final double width, aspectRetio;
   final Product product;
+  // final GestureDetector press;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +29,11 @@ class ProductCard extends StatelessWidget {
       child: SizedBox(
         width: getProportionateScreenWidth(width),
         child: GestureDetector(
-          // onTap: () => Navigator.pushNamed(
-          //   context,
-          //   DetailsScreen.routeName,
-          //   arguments: ProductDetailsArguments(product: product),
-          // ),
+          onTap: () => Navigator.pushNamed(
+            context,
+            DetailsScreen.routeName,
+            arguments: ProductDetailsArguments(product: product),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

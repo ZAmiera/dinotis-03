@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:dinotis/enums.dart';
+import 'package:dinotis/screens/chat/chat_screen.dart';
 import 'package:dinotis/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -54,8 +57,14 @@ class CustomBottomNavBar extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Chat bubble Icon.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset(
+                  "assets/icons/Chat bubble Icon.svg",
+                  color: MenuState.message == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                  ),
+                onPressed: () =>
+                 Navigator.pushNamed(context, ChatScreen.routeName),
               ),
               IconButton(
                 icon: SvgPicture.asset(
