@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../size_config.dart';
 
-class DefaultButton extends StatelessWidget {
-  const DefaultButton({
+class DetailButton extends StatelessWidget {
+  const DetailButton({
     super.key,
     required this.text,
     this.press,
@@ -31,7 +31,8 @@ class DefaultButton extends StatelessWidget {
           text,
           style: TextStyle(
             color: Colors.white,
-            fontSize: getProportionateScreenWidth(18),
+            fontSize: getProportionateScreenWidth(14),
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

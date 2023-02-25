@@ -30,6 +30,10 @@ final headingStyle = TextStyle(
 
 const defaultDuration = Duration(milliseconds: 250);
 
+//api 
+const String baseUrl = "private-anon-987cfb98d0-dinotis1.apiary-mock.com";
+const String creatorsUrl = "/v1/creators/:id";
+
 // Form Error
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");

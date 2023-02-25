@@ -1,8 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:dinotis/enums.dart';
 import 'package:dinotis/screens/chat/chat_screen.dart';
 import 'package:dinotis/screens/home_screen/home_screen.dart';
+import 'package:dinotis/screens/jadwal/jadwal_screen.dart';
+import 'package:dinotis/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -44,7 +46,7 @@ class CustomBottomNavBar extends StatelessWidget {
             children: [
               IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/Shop Icon.svg",
+                  "assets/icons/home-nav.svg",
                   color: MenuState.home == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -53,12 +55,18 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
-                onPressed: () {},
+                icon: SvgPicture.asset(
+                  "assets/icons/jadwal-nav.svg",
+                  color: MenuState.jadwal == selectedMenu
+                      ? kPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                 Navigator.pushNamed(context, Jadwal.routeName),
               ),
               IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/Chat bubble Icon.svg",
+                  "assets/icons/chat-nav.svg",
                   color: MenuState.message == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -68,12 +76,13 @@ class CustomBottomNavBar extends StatelessWidget {
               ),
               IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/User Icon.svg",
+                  "assets/icons/profile-nav.svg",
                   color: MenuState.profile == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),
-                onPressed: () {}
+                onPressed: () =>
+                 Navigator.pushNamed(context, ProfileScreen.routeName),
                     // Navigator.pushNamed(context, ProfileScreen.routeName),
               ),
             ],

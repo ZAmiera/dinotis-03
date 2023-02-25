@@ -14,17 +14,15 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-      SizedBox(height: getProportionateScreenHeight(20)),
+        SizedBox(
+          height: getProportionateScreenHeight(20)),
         Container(
-         color: Colors.white,
-         child: Row(
+          color: Colors.white,
+          child: Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(
-                  left: 10,
-                  top: 70
-                  ),
-                  ),
+                padding: EdgeInsets.only(left: 10, top: 70),
+              ),
               IconButton(
                 icon: Icon(Icons.arrow_back),
                 color: Colors.black,
@@ -39,22 +37,18 @@ class Body extends StatelessWidget {
                 ),
               ),
             ],
-         ) ,
+          ),
         ),
         Expanded(
-          child: ListView.builder(
-            itemCount: chatsData.length ,
-            itemBuilder: (context, index) => 
-            ChatCard(
-              chat: chatsData[index],
-              press: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MessagesScreen())),
-            ),
-            )
-          )
-        
+            child: ListView.builder(
+          itemCount: chatsData.length,
+          itemBuilder: (context, index) => ChatCard(
+            chat: chatsData[index],
+            press: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MessagesScreen())),
+          ),
+        ))
       ],
     );
   }
 }
-
